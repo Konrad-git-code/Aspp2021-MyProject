@@ -28,7 +28,7 @@ def gaussian2DFit(XY, x0, y0, sigmax, sigmay, amp, background):
         
 
 	"""
-	X, ) = XY
+	X, Y = XY
 	fit = amp*np.exp(-((X-x0)**2/(2*sigmax**2) + (Y-y0)**2/(2*sigmay**2)))+ background
 	
 	return fit.ravel()
