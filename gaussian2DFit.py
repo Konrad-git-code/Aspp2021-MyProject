@@ -7,7 +7,7 @@ def gaussian2DFit(XY, x0, y0, sigmax, sigmay, amp, background):
 
 	Parameters
         ----------
-        XY : iterable object
+        XY : ndarray
             matrix to fit the Gaussian function
         x0 : int, float
             x-coordinate of a centroid
@@ -16,15 +16,15 @@ def gaussian2DFit(XY, x0, y0, sigmax, sigmay, amp, background):
         sigmax : int, float
             standard deviation of the Gaussian function along the x-axis
         sigmay : int, float
-            standard deviation of the Gaussian function along the x-axis
+            standard deviation of the Gaussian function along the y-axis
         amp : float
             amplitude of the Gaussian function
         background : float
             background signal in the matrix to be fit
         Returns
         ----------
-        iterable object
-            Gaussian function evaulated with the given parameters
+        array_like
+            Gaussian function evaluated with the given parameters
         
 
 	"""
@@ -41,12 +41,12 @@ def getFitParam(im):
 
         Parameters
         ----------
-        im : iterable object
+        im : ndarray
             matrix to fit the Gaussian function and estimate the fit parameters for
         
         Returns
         ----------
-        iterable object
+        ndarray
             array of two-dimensional Gaussian fit parameters
 
 

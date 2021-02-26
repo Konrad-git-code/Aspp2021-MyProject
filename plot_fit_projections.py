@@ -1,17 +1,17 @@
 import matplotlib.pyplot as plt
 
 def plot_fit_projections(im, ax, ax_plotx, ax_ploty):
-    """Plots an image and its projects along the x- and y-axis
+    """Plots an image and its projections along the x- and y-axis
     
     Parameters
     ----------
-    im : iterable object
+    im : ndarray
         image to plot
-    ax : axes object
+    ax : `~matplotlib.axes.Axes`
         axes to plot the image in
-    ax_plotx : axes object
+    ax_plotx : `~matplotlib.axes.Axes`
         axes for the x-axis projection
-    ax_ploty : axes object
+    ax_ploty : `~matplotlib.axes.Axes`
         axes for the y-axis projection
     
     """
@@ -22,7 +22,7 @@ def plot_fit_projections(im, ax, ax_plotx, ax_ploty):
     # plot the image
     ax.imshow(im)
     
-    #plot projections of the Gaussian fit along the x and y axes
+    # plot projections of the Gaussian fit along the x and y axes
     ax_plotx.plot(im.sum(axis=0)/im.shape[0])
     ax_ploty.plot(im.sum(axis=1)/im.shape[1], np.arange(0, im.shape[0]))
     
